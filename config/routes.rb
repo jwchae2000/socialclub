@@ -116,7 +116,7 @@
 
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations"}
   # defaults to dashboard
   root :to => redirect('/index')
 

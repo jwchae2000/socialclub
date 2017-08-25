@@ -19,7 +19,7 @@ module Angle
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    
+
     # setup bower components folder for lookup
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
     # fonts
@@ -77,4 +77,19 @@ module Angle
   end
 end
 
+module Deviseapp
+  class Application < Rails::Application
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
+    ActionMailer::Base.smtp_settings = {
+      :address => 'email-smtp.us-east-1.amazonaws.com',
+      :port => 587,
+      :enable_starttls_auto => true,
+      :user_name => 'AKIAJBEW7IZE4XSOJUSA',
+      :password => 'Ai153YKh87LYhMGq6NMlf0D1Wv/xf6JXEj81cOMxU6mw',
+      :authentication => :login
+      }
 
+  end
+end

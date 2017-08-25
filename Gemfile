@@ -5,13 +5,14 @@ gem 'rails', '5.0.1'
 
 # HEROKU doesn't support sqlite3.
 # Comment this gem
-gem 'sqlite3'
+gem 'pg', '~> 0.20.0'
 # and uncomment the following
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # gem 'pg'
 # gem 'thin'
 gem 'devise', '~> 4.2'
+gem 'figaro', '~> 1.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.1'
 # Use Uglifier as compressor for JavaScript assets

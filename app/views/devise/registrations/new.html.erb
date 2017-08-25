@@ -16,6 +16,10 @@
          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
            <div class="form-group has-feedback">
+             <%= f.label :Name, class: 'text-muted' %><br />
+             <%= f.text_field :name, autofocus: true, placeholder: "Enter name", class: 'form-control', id: 'signupInputEmail1' %>
+           </div>
+           <div class="form-group has-feedback">
              <%= f.label :Email_Address, class: 'text-muted' %><br />
              <%= f.email_field :email, autofocus: true, placeholder: "Enter email", class: 'form-control', id: 'signupInputEmail1' %>
            </div>
